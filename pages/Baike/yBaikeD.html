@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="lightblue">
+    <ion-title>百度百科</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="width:100%">
+  <p style='font-size:14px'>{{habs}}</p>
+  <p style='font-size:14px'>
+    <ion-list>
+      <div *ngFor='let hcard of hcards'>
+        <b>{{hcard.name}}：</b>&nbsp;&nbsp;&nbsp;&nbsp;<b [innerHTML]="hcard.value"></b>
+      </div>
+    </ion-list>
+  </p>
+  <p align='right'>
+    <a href="#" (click)="getDBaike(hurl)" style='font-size:14px'>转到百度百科</a>
+  </p>
+</ion-content>

@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar color="lightblue" class="user-header">
+    <ion-searchbar></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-segment mode="md" [(ngModel)]="vm.selectedSegment">
+      <ion-segment-button value="s0" (ionSelect)="goToSlide(0)">
+        头条
+      </ion-segment-button>
+      <ion-segment-button value="s1" (ionSelect)="goToSlide(1)">
+        军事
+      </ion-segment-button>
+      <ion-segment-button value="s2" (ionSelect)="goToSlide(2)">
+        科技
+      </ion-segment-button>
+      <ion-segment-button value="s3" (ionSelect)="goToSlide(3)">
+        体育
+      </ion-segment-button>
+      <ion-segment-button value="s4" (ionSelect)="goToSlide(4)">
+        财经
+      </ion-segment-button>
+      <ion-segment-button value="s5" (ionSelect)="goToSlide(5)">
+        历史
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div>
+    <ion-slides centeredSlides="true" zoom="false" (ionSlideDidChange)="onSlideDidChange()">
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div *ngFor="let iNew of iNews">
+            <ion-item *ngIf="iNew.title != undefined && iNew.url != undefined" style="font-size:12px">
+              <img *ngIf="iNew.imgsrc" src="{{iNew.imgsrc}}" style="width:100px;height:60px" item-left/>
+              <p style="font-size:12px" (click)="getDNews(iNew.url_3w)">{{iNew.title}}</p><br/>
+              <p style="font-size:10px">
+                <ion-icon name="chatboxes">摘自：{{iNew.source}}</ion-icon>
+              </p>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

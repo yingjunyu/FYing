@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="lightblue" class="user-header">
+    <ion-title>百度百科</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <form (submit)='setBk()'>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>查询内容</ion-label>
+            <ion-input type="text" [(ngModel)]="sBK" name='sBK'></ion-input>
+          </ion-item>
+          <button ion-button type='submit' block>查询</button>
+        </ion-list>
+      </form>
+      <div *ngIf="gBk != undefined" style="font-size:14px">最近一次搜索：<b (click)="setBk1(gBk)">{{gBk}}</b></div>
+</ion-content>
